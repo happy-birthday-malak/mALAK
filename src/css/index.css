@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
 
 
@@ -764,4 +763,81 @@ body, html{
 	to{
 		height:200px;
 	}
+}
+
+.message--section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.message--content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 15px;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.message--content::before,
+.message--content::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.message--content::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.message--content::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+.message--content h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.message--content h2:first-child {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.message--content h2:last-child {
+  color: #ffeb3b;
+  font-size: 2.8rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
